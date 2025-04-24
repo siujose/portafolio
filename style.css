@@ -64,10 +64,10 @@ body { /* Selecciona el elemento body */
     border-radius: 20px; /* Establece el radio de la esquina */
 }
 
-.container { /* Selecciona todos los elementos con la clase container */
-    width: 90%; /* Establece el ancho al 90% */
-    margin: auto; /* Centra el elemento horizontalmente */
-    overflow: hidden; /* Oculta el contenido que se desborda */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Header y Nav */
@@ -307,46 +307,87 @@ nav a:hover { /* Selecciona todos los elementos a dentro de un elemento nav cuan
     margin-bottom: 3em; /* Establece el margen inferior */
 }
 
-.education h2, /* Selecciona todos los elementos h2 dentro de un elemento con la clase education */
-.experience h2 { /* Selecciona todos los elementos h2 dentro de un elemento con la clase experience */
-    font-size: 2em; /* Establece el tamaño de la fuente */
-    margin-bottom: 1em; /* Establece el margen inferior */
-    text-align: center; /* Alinea el texto al centro */
+.education h2,
+.experience h2 {
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
+    text-align: center;
+    color: #2196f3;
 }
 
-.education-item, /* Selecciona todos los elementos con la clase education-item */
-.experience-item { /* Selecciona todos los elementos con la clase experience-item */
-    display: flex; /* Establece el tipo de display como flex */
-    align-items: center; /* Centra los elementos verticalmente */
-    margin-bottom: 2em; /* Establece el margen inferior */
-    padding: 1em; /* Establece el relleno interior */
-    border: 1px solid #ddd; /* Establece el borde */
-    border-radius: 10px; /* Establece el radio de la esquina */
+.education-item,
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.education-item img, /* Selecciona todos los elementos img dentro de un elemento con la clase education-item */
-.experience-item img { /* Selecciona todos los elementos img dentro de un elemento con la clase experience-item */
-    width: 70px; /* Establece el ancho */
-    height: 70px; /* Establece la altura */
-    margin-right: 1em; /* Establece el margen derecho */
-    border-radius: 10px; /* Establece el radio de la esquina */
+.education-item:hover,
+.experience-item:hover {
+    transform: translateY(-5px);
+    background-color: #e1f5fe;
+    border-color: #4fc3f7;
 }
 
-.education-item h3, /* Selecciona todos los elementos h3 dentro de un elemento con la clase education-item */
-.experience-item h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase experience-item */
-    font-size: 1.3em; /* Establece el tamaño de la fuente */
-    margin-bottom: 0.3em; /* Establece el margen inferior */
+.education-item img,
+.experience-item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+    margin-bottom: 1em;
+    border-radius: 10px;
 }
 
-.education-item h4, /* Selecciona todos los elementos h4 dentro de un elemento con la clase education-item */
-.experience-item h4 { /* Selecciona todos los elementos h4 dentro de un elemento con la clase experience-item */
-    font-size: 1.1em; /* Establece el tamaño de la fuente */
-    margin-bottom: 0.3em; /* Establece el margen inferior */
+.education-item h3,
+.experience-item h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+    text-align: center;
 }
 
-.education-item p, /* Selecciona todos los elementos p dentro de un elemento con la clase education-item */
-.experience-item p { /* Selecciona todos los elementos p dentro de un elemento con la clase experience-item */
-    font-size: 1em; /* Establece el tamaño de la fuente */
+.education-item h4,
+.experience-item h4 {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+.education-item p,
+.experience-item p {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.education-item,
+.experience-item {
+    padding: 0.8em;
+    border: 1px solid #eee;
+}
+
+.education-item img,
+.experience-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.education,
+.experience {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.empty-item {
+    border: none;
+    background-color: #f0f0f0;
+    box-shadow: none;
 }
 
 /* Services Page Styles */
