@@ -3,7 +3,7 @@ body { /* Selecciona el elemento body */
     font-family: 'Poppins', sans-serif; /* Establece la fuente del texto */
     margin: 0; /* Elimina el margen exterior */
     padding: 0; /* Elimina el relleno interior */
-    background-color: #f0f0f0; /* Establece el color de fondo */
+    background-color: #FFFFFF; /* Establece el color de fondo */
     color: #333; /* Establece el color del texto */
     line-height: 1.6; /* Establece el espaciado entre líneas */
 }
