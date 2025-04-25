@@ -297,6 +297,7 @@ nav a:hover { /* Selecciona todos los elementos a dentro de un elemento nav cuan
     font-size: 1em; /* Establece el tamaño de la fuente */
     margin-bottom: 2em; /* Establece el margen inferior */
     text-align: justify; /* Alinea el texto al centro */
+    margin-bottom: 6em; /* Establece el margen inferior */
 }
 
 .education { /* Selecciona todos los elementos con la clase education */
