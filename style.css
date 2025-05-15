@@ -1,0 +1,659 @@
+/* Estilos generales */
+body { /* Selecciona el elemento body */
+    font-family: 'Poppins', sans-serif; /* Establece la fuente del texto */
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno interior */
+    background-color: #f0f0f0; /* Establece el color de fondo */
+    color: #333; /* Establece el color del texto */
+    line-height: 1.6; /* Establece el espaciado entre líneas */
+}
+
+#barraDeProgreso { /* Selecciona el elemento con el id barraDeProgreso */
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    height: 2px; /* Establece la altura a 2 píxeles */
+    background-color: #eee; /* Establece el color de fondo */
+    position: fixed; /* Fija la posición del elemento en la ventana */
+    top: 0; /* Coloca el elemento en la parte superior de la ventana */
+    left: 0; /* Coloca el elemento en la parte izquierda de la ventana */
+    z-index: 1000; /* Establece el orden de apilamiento del elemento */
+}
+
+#progreso { /* Selecciona el elemento con el id progreso */
+    height: 2px; /* Establece la altura a 2 píxeles */
+    background-color: #007bff; /* Establece el color de fondo */
+    width: 0%; /* Establece el ancho al 0% */
+}
+
+.skill-bars { /* Selecciona todos los elementos con la clase skill-bars */
+    padding: 2px 3px; /* Establece el relleno interior */
+}
+
+.skill-bar { /* Selecciona todos los elementos con la clase skill-bar */
+    margin-bottom: 25px; /* Establece el margen inferior */
+    position: relative; /* Establece la posición del elemento como relativa */
+}
+
+.skill-bar .info { /* Selecciona todos los elementos con la clase info dentro de un elemento con la clase skill-bar */
+    margin-bottom: 5px; /* Establece el margen inferior */
+    display: flex; /* Establece el tipo de display como flex */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+}
+
+.skill-bar .info span { /* Selecciona todos los elementos span dentro de un elemento con la clase info dentro de un elemento con la clase skill-bar */
+    font-weight: 500; /* Establece el grosor de la fuente */
+    font-size: 14px; /* Establece el tamaño de la fuente */
+    color: #333; /* Establece el color del texto */
+}
+
+.skill-bar .bar { /* Selecciona todos los elementos con la clase bar dentro de un elemento con la clase skill-bar */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 10px; /* Establece la altura a 10 píxeles */
+    background: #ccc; /* Establece el color de fondo */
+    border-radius: 20px; /* Establece el radio de la esquina */
+    position: relative; /* Establece la posición del elemento como relativa */
+}
+
+.skill-bar .bar .inner-bar { /* Selecciona todos los elementos con la clase inner-bar dentro de un elemento con la clase bar dentro de un elemento con la clase skill-bar */
+    position: absolute; /* Establece la posición del elemento como absoluta */
+    top: 0; /* Coloca el elemento en la parte superior */
+    left: 0; /* Coloca el elemento en la parte izquierda */
+    width: 0%; /* Establece el ancho al 0% */
+    height: 100%; /* Establece la altura al 100% */
+    background: #3498db; /* Establece el color de fondo */
+    border-radius: 20px; /* Establece el radio de la esquina */
+}
+
+.container { /* Selecciona todos los elementos con la clase container */
+    width: 90%; /* Establece el ancho al 90% */
+    margin: auto; /* Centra el elemento horizontalmente */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+/* Header y Nav */
+/* Estilos para el encabezado y la navegación */
+header { /* Selecciona el elemento header */
+    background: #fbfbfb; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    padding-top: 0.5em; /* Establece el relleno superior */
+    border-bottom: 3px solid #e8491d; /* Establece el borde inferior */
+    position: relative; /* Asegura que el encabezado sea un contenedor posicionado */
+}
+
+.soporte-imagen { /* Selecciona todos los elementos con la clase soporte-imagen */
+    position: absolute; /* Posiciona la imagen absolutamente dentro del encabezado */
+    top: 0; /* Coloca la imagen en la parte superior */
+    left: 0; /* Coloca la imagen en la parte izquierda */
+    width: 100%; /* La imagen ocupa todo el ancho del encabezado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: -1; /* Asegura que la imagen esté por debajo de otros elementos */
+}
+
+header::after { /* Selecciona el pseudo-elemento after del elemento header */
+    content: ''; /* Establece el contenido del pseudo-elemento */
+    display: table; /* Establece el tipo de display como table */
+    clear: both; /* Limpia los floats */
+}
+
+.logo { /* Selecciona todos los elementos con la clase logo */
+    float: left; /* Coloca el elemento a la izquierda */
+    width: 30%; /* Establece el ancho al 30% */
+}
+
+nav { /* Selecciona el elemento nav */
+    float: right; /* Coloca el elemento a la derecha */
+    width: 70%; /* Establece el ancho al 70% */
+    margin-top: 10px; /* Establece el margen superior */
+}
+
+nav ul { /* Selecciona todos los elementos ul dentro de un elemento nav */
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno interior */
+    list-style: none; /* Elimina los estilos de la lista */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+nav li { /* Selecciona todos los elementos li dentro de un elemento nav */
+    display: inline; /* Coloca los elementos en línea */
+    margin-left: 1em; /* Establece el margen izquierdo */
+}
+
+nav li:last-child { /* Selecciona el último elemento li dentro de un elemento nav */
+    margin-right: 4em; /* Establece el margen derecho */
+}
+
+nav a { /* Selecciona todos los elementos a dentro de un elemento nav */
+    /*color: #007bff;*/
+    text-decoration: none; /* Elimina la decoración del texto */
+    font-size: 0.7em; /* Establece el tamaño de la fuente */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: #333;   /* Establece el color del texto */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente del texto */
+}
+
+nav a:hover { /* Selecciona todos los elementos a dentro de un elemento nav cuando el mouse está encima */
+    /* Cambia el color del texto a azul al pasar el mouse por encima */
+    color: #3498db; /* Establece el color del texto */
+    font-family: 'Roboto bold', sans-serif; /* Establece la fuente del texto */
+    font-weight: bold; /* Establece el grosor de la fuente */
+
+}
+
+/* Hero Section Styles */
+/* Estilos para la sección "Hero" */
+#hero { /* Selecciona el elemento con el id hero */
+    background: url('asset/soporte1.jpg') no-repeat center center/cover; /* Establece la imagen de fondo */
+    height: 780px; /* Establece la altura */
+    text-align: center; /* Alinea el texto al centro */
+    color: #fff; /* Establece el color del texto */
+}
+
+#hero .hero-content { /* Selecciona todos los elementos con la clase hero-content dentro de un elemento con el id hero */
+    padding-top: 250px; /* Establece el relleno superior */
+    background-color: rgba(255, 255, 255, 0.8); /* Establece el color de fondo */
+    padding: 2em; /* Establece el relleno interior */
+    border-radius: 0px; /* Establece el radio de la esquina */
+    height: 780px; /* Establece la altura */
+}
+
+#hero h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id hero */
+    font-size: 2.5em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+    margin-top: 4em; /* Establece el margen superior */
+    color: #333;   /* Establece el color del texto */
+    font-family: 'Roboto Bold', sans-serif; /* Establece la fuente del texto */
+    font-weight: bold; /* Establece el grosor de la fuente */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#hero p { /* Selecciona todos los elementos p dentro de un elemento con el id hero */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    color: #333; /* Establece el color del texto */
+}
+
+.button { /* Selecciona todos los elementos con la clase button */
+    display: inline-block; /* Coloca el elemento en línea */
+    background: #3498db; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    padding: 1em 2em; /* Establece el relleno interior */
+    text-decoration: none; /* Elimina la decoración del texto */
+    border-radius: 5px; /* Establece el radio de la esquina */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    border: none; /* Elimina el borde */
+}
+
+/* About Page Styles */
+/* Estilos para la página "Acerca de mi" */
+#about { /* Selecciona el elemento con el id about */
+    padding: 6em 0; /* Establece el relleno interior */
+}
+
+#about h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id about */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#about p { /* Selecciona todos los elementos p dentro de un elemento con el id about */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#about > section > p { /* Selecciona todos los elementos p dentro de un elemento section dentro de un elemento con el id about */
+    margin-bottom: 6em; /* Establece el margen inferior */
+}
+
+.skills { /* Selecciona todos los elementos con la clase skills */
+    display: flex; /* Establece el tipo de display como flex */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    margin-bottom: 4em; /* Establece el margen inferior */
+}
+
+.skill { /* Selecciona todos los elementos con la clase skill */
+    width: 30%; /* Establece el ancho al 30% */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 1em; /* Establece el relleno interior */
+    border: 1px solid #ddd; /* Establece el borde */
+    border-radius: 5px; /* Establece el radio de la esquina */
+}
+
+.skill img { /* Selecciona todos los elementos img dentro de un elemento con la clase skill */
+    width: 70px; /* Establece el ancho */
+    height: 70px; /* Establece la altura */
+    margin-bottom: 1em; /* Establece el margen inferior */
+}
+
+.skill h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase skill */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2s.5em; /* Establece el margen inferior */
+}
+
+.skill p { /* Selecciona todos los elementos p dentro de un elemento con la clase skill */
+    text-align: justify !important; /* Justifica el texto */
+    margin-bottom: 1em; /* Establece el margen inferior */
+}
+
+.my-info { /* Selecciona todos los elementos con la clase my-info */
+    display: flex; /* Establece el tipo de display como flex */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+}
+
+.info-image { /* Selecciona todos los elementos con la clase info-image */
+    width: 30%; /* Establece el ancho al 30% */
+}
+
+.info-image img { /* Selecciona todos los elementos img dentro de un elemento con la clase info-image */
+    width: 100%; /* Establece el ancho al 100% */
+    border-radius: 5px; /* Establece el radio de la esquina */
+}
+
+.skills-list { /* Selecciona todos los elementos con la clase skills-list */
+    width: 30%; /* Establece el ancho al 30% */
+}
+
+.skills-list h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase skills-list */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+}
+
+.skills-list li { /* Selecciona todos los elementos li dentro de un elemento con la clase skills-list */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+    list-style: none; /* Elimina los estilos de la lista */
+}
+
+.personal-info { /* Selecciona todos los elementos con la clase personal-info */
+    width: 30%; /* Establece el ancho al 30% */
+}
+
+.personal-info h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase personal-info */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.em; /* Establece el margen inferior */
+}
+
+.personal-info p { /* Selecciona todos los elementos p dentro de un elemento con la clase personal-info */
+    margin-bottom: 0.1em; /* Establece el margen inferior */
+    line-height: 0.2; /* Establece el espaciado entre líneas */
+}
+
+.personal-info span { /* Selecciona todos los elementos span dentro de un elemento con la clase personal-info */
+    font-weight: bold; /* Establece el grosor de la fuente */
+}
+
+/* Resume Page Styles */
+/* Estilos para la página "Resumen" */
+#resume { /* Selecciona el elemento con el id resume */
+    padding: 6em 0; /* Establece el relleno interior */
+}
+
+#resume h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id resume */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#resume p { /* Selecciona todos los elementos p dentro de un elemento con el id resume */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.education { /* Selecciona todos los elementos con la clase education */
+    margin-bottom: 3em; /* Establece el margen inferior */
+}
+
+.experience { /* Selecciona todos los elementos con la clase experience */
+    margin-bottom: 3em; /* Establece el margen inferior */
+}
+
+.education h2, /* Selecciona todos los elementos h2 dentro de un elemento con la clase education */
+.experience h2 { /* Selecciona todos los elementos h2 dentro de un elemento con la clase experience */
+    font-size: 2.5em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.education-item,
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover,
+.experience-item:hover {
+    transform: translateY(-5px);
+    background-color: #e1f5fe;
+    border-color: #4fc3f7;
+}
+
+.education-item img,
+.experience-item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.education-item h3,
+.experience-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.education-item h4,
+.experience-item h4 {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.education-item p,
+.experience-item p {
+    font-size: 1em;
+    text-align: center;
+}
+
+.education,
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+/* Services Page Styles */
+/* Estilos para la página "Servicios" */
+#services { /* Selecciona el elemento con el id services */
+    padding: 6em 0; /* Establece el relleno interior */
+}
+
+#services h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id services */
+    font-size: 2.0em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#services p { /* Selecciona todos los elementos p dentro de un elemento con el id services */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.services-grid { /* Selecciona todos los elementos con la clase services-grid */
+    display: grid; /* Establece el tipo de display como grid */
+    grid-template-columns: repeat(3, 1fr); /* Establece el número de columnas */
+    grid-gap: 2em; /* Establece el espacio entre las celdas */
+}
+
+.service-item { /* Selecciona todos los elementos con la clase service-item */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 2em; /* Establece el relleno interior */
+    border: 1px solid #ddd; /* Establece el borde */
+    border-radius: 5px; /* Establece el radio de la esquina */
+}
+
+.service-item img { /* Selecciona todos los elementos img dentro de un elemento con la clase service-item */
+    width: 70px; /* Establece el ancho */
+    height: 70px; /* Establece la altura */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+}
+
+.service-item h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase service-item */
+    font-size: 1.3em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+}
+
+.service-item p { /* Selecciona todos los elementos p dentro de un elemento con la clase service-item */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+}
+
+/* Portfolio Page Styles */
+/* Estilos para la página "Portafolio" */
+#portfolio { /* Selecciona el elemento con el id portfolio */
+    padding: 6em 0; /* Establece el relleno interior */
+}
+
+#portfolio h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id portfolio */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#portfolio p { /* Selecciona todos los elementos p dentro de un elemento con el id portfolio */
+    font-size: 1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.portfolio-filters { /* Selecciona todos los elementos con la clase portfolio-filters */
+    text-align: center; /* Alinea el texto al centro */
+    margin-bottom: 2em; /* Establece el margen inferior */
+}
+
+.filter-button { /* Selecciona todos los elementos con la clase filter-button */
+    background: none; /* Elimina el color de fondo */
+    border: 1px solid #ddd; /* Establece el borde */
+    padding: 0.5em 1em; /* Establece el relleno interior */
+    margin: 0 0.5em; /* Establece el margen */
+    cursor: pointer; /* Establece el cursor como pointer */
+    border-radius: 5px; /* Establece el radio de la esquina */
+}
+
+.filter-button.active { /* Selecciona todos los elementos con la clase filter-button y la clase active */
+    background: #e8491d; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    border-color: #e8491d; /* Establece el color del borde */
+}
+
+.portfolio-grid { /* Selecciona todos los elementos con la clase portfolio-grid */
+    display: grid; /* Establece el tipo de display como grid */
+    grid-template-columns: repeat(3, 1fr); /* Establece el número de columnas */
+    grid-gap: 2em; /* Establece el espacio entre las celdas */
+}
+
+.portfolio-item { /* Selecciona todos los elementos con la clase portfolio-item */
+    position: relative; /* Establece la posición del elemento como relativa */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    border-radius: 5px; /* Establece el radio de la esquina */
+}
+
+.portfolio-item img { /* Selecciona todos los elementos img dentro de un elemento con la clase portfolio-item */
+    width: 100%; /* Establece el ancho al 100% */
+    display: block; /* Establece el tipo de display como block */
+}
+
+/* Contact Page Styles */
+/* Estilos para la página "Contacto" */
+#contact { /* Selecciona el elemento con el id contact */
+    padding: 6em 0; /* Establece el relleno interior */
+}
+
+#contact h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id contact */
+    font-size: 2em; /* Establece el tamaño de la fuente */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#contact p { /* Selecciona todos los elementos p dentro de un elemento con el id contact */
+    font-size: 0.9em; /* Establece el tamaño de la fuente */
+    margin-bottom: 2em; /* Establece el margen inferior */
+    text-align: justify; /* Justifica el texto */
+}
+
+.contact-info { /* Selecciona todos los elementos con la clase contact-info */
+    display: flex; /* Establece el tipo de display como flex */
+    justify-content: space-around; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    margin-bottom: 2em; /* Establece el margen inferior */
+}
+
+.contact-item { /* Selecciona todos los elementos con la clase contact-item */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.contact-item img { /* Selecciona todos los elementos img dentro de un elemento con la clase contact-item */
+    width: 40px; /* Establece el ancho */
+    height: 40px; /* Establece la altura */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+}
+
+.contact-item h3 { /* Selecciona todos los elementos h3 dentro de un elemento con la clase contact-item */
+    font-size: .8em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.3em; /* Establece el margen inferior */
+    border-bottom: 2px solid blue; /* Agrega una línea azul debajo del título de la información de contacto */
+    width: 100px; /* Establece el ancho */
+    padding-bottom: 0.2em; /* Establece el relleno inferior */
+    display: block; /* Establece el tipo de display como block */
+    margin: 0 auto; /* Centra la línea azul */
+}
+
+.contact-form { /* Selecciona todos los elementos con la clase contact-form */
+    display: flex; /* Establece el tipo de display como flex */
+    flex-direction: column; /* Establece la dirección de los elementos como columna */
+    width: 50%; /* Establece el ancho al 50% */
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+}
+
+.contact-form input, /* Selecciona todos los elementos input dentro de un elemento con la clase contact-form */
+.contact-form textarea { /* Selecciona todos los elementos textarea dentro de un elemento con la clase contact-form */
+    padding: 0.8em; /* Establece el relleno interior */
+    margin-bottom: 1em; /* Establece el margen inferior */
+    border: 1px solid #ddd; /* Establece el borde */
+    border-radius: 10px; /* Establece el radio de la esquina */
+}
+
+.contact-form textarea { /* Selecciona todos los elementos textarea dentro de un elemento con la clase contact-form */
+    height: 150px; /* Establece la altura */
+}
+
+/* Footer Styles */
+/* Estilos para el pie de página */
+footer { /* Selecciona el elemento footer */
+    background: #333; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 1em 0; /* Establece el relleno interior */
+    margin-top: 0em; /* Establece el margen superior */
+    font-size: 0.8em; /* Establece el tamaño de la fuente */
+}
+
+.social-icons { /* Selecciona todos los elementos con la clase social-icons */
+    margin-top: 1em; /* Establece el margen superior */
+}
+
+.social-icons a { /* Selecciona todos los elementos a dentro de un elemento con la clase social-icons */
+    color: #fff; /* Establece el color del texto */
+    font-size: 1.5em; /* Establece el tamaño de la fuente */
+    margin: 0 0.5em; /* Establece el margen */
+}
+
+/* Media Queries for Responsive Design */
+/* Estilos para diferentes tamaños de pantalla */
+/* For tablets and larger smartphones */
+@media (max-width: 768px) { /* Selecciona todos los elementos cuando el ancho de la pantalla es menor o igual a 768px */
+    .container { /* Selecciona todos los elementos con la clase container */
+        width: 95%; /* Establece el ancho al 95% */
+    }
+
+    nav { /* Selecciona el elemento nav */
+        width: 100%; /* Establece el ancho al 100% */
+        float: none; /* Elimina el float */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    nav ul { /* Selecciona todos los elementos ul dentro de un elemento nav */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    nav li { /* Selecciona todos los elementos li dentro de un elemento nav */
+        display: block; /* Establece el tipo de display como block */
+        margin: 0.5em 0; /* Establece el margen */
+        font-size: 1.2em; /* Establece el tamaño de la fuente */
+        padding-left: 1em; /* Añade un espacio a la izquierda */
+    }
+
+    nav li a { /* Selecciona todos los elementos a dentro de un elemento nav li */
+        display: block; /* Hace que el enlace ocupe todo el ancho */
+        padding-left: 1em; /* Añade un espacio a la izquierda */
+    }
+
+    nav li a::before { /* Selecciona el pseudo-elemento before de todos los elementos a dentro de un elemento nav li */
+        content: "\2022"; /* Añade un punto central */
+        display: inline-block; /* Permite posicionar el punto */
+        width: 1em; /* Define el ancho del punto */
+        margin-left: -1em; /* Mueve el punto a la izquierda */
+        font-size: 2em; /* Aumenta el tamaño del punto */
+        vertical-align: middle; /* Centra el punto verticalmente */
+        padding-left: 1em;
+    }
+
+    .logo { /* Selecciona todos los elementos con la clase logo */
+        float: none; /* Elimina el float */
+        width: 100%; /* Establece el ancho al 100% */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    #hero { /* Selecciona el elemento con el id hero */
+        height: auto; /* Establece la altura como auto */
+    }
+
+    #hero .hero-content { /* Selecciona todos los elementos con la clase hero-content dentro de un elemento con el id hero */
+        padding-top: 50px; /* Establece el relleno superior */
+        height: auto; /* Establece la altura como auto */
+    }
+
+#hero h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id hero */
+    font-size: 2.1em; /* Establece el tamaño de la fuente */
+    margin-bottom: 0.5em; /* Establece el margen inferior */
+    margin-top: 4em; /* Establece el margen superior */
+    color: #333; /* Establece el color del texto */
+    text-align: center; /* Alinea el texto al centro */
+    
+}
+
+    .skills, .my-info { /* Selecciona todos los elementos con la clase skills y la clase my-info */
+        flex-direction: column; /* Establece la dirección de los elementos como columna */
+    }
+
+    .skill, .info-image, .skills-list, .personal-info { /* Selecciona todos los elementos con la clase skill, la clase info-image, la clase skills-list y la clase personal-info */
+        width: 100%; /* Establece el ancho al 100% */
+        margin-bottom: 2em; /* Establece el margen inferior */
+    }
+
+    .services-grid, .portfolio-grid { /* Selecciona todos los elementos con la clase services-grid y la clase portfolio-grid */
+        grid-template-columns: repeat(1, 1fr); /* Establece el número de columnas */
+    }
+
+    .contact-info { /* Selecciona todos los elementos con la clase contact-info */
+        flex-direction: column; /* Establece la dirección de los elementos como columna */
+    }
+
+    .contact-item { /* Selecciona todos los elementos con la clase contact-item */
+        margin-bottom: 2em; /* Establece el margen inferior */
+    }
+
+
+    .contact-form { /* Selecciona todos los elementos con la clase contact-form */
+        width: 90%; /* Establece el ancho al 90% */
+    }
+}
+
+/* For smaller smartphones */
+@media (max-width: 480px) { /* Selecciona todos los elementos cuando el ancho de la pantalla es menor o igual a 480px */
+    #hero h1 { /* Selecciona todos los elementos h1 dentro de un elemento con el id hero */
+        font-size: 2em; /* Establece el tamaño de la fuente */
+    }
+
+    #hero p { /* Selecciona todos los elementos p dentro de un elemento con el id hero */
+        font-size: 1em; /* Establece el tamaño de la fuente */
+    }
+}
